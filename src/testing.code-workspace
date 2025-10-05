@@ -1,0 +1,44 @@
+{
+	"folders": [
+		{
+			"path": "../../testing"
+		},
+		{
+			"name": "adcing",
+			"path": "../../adcing"
+		},
+		{
+			"name": "awooga",
+			"path": "../../awooga"
+		},
+		{
+			"name": "250811-021723-espidf-arduino-blink",
+			"path": "../../250811-021723-espidf-arduino-blink"
+		},
+		{
+			"name": "rAAAAA",
+			"path": "../../rAAAAA"
+		},
+		{
+			"name": "burdel",
+			"path": "../../burdel"
+		},
+		{
+			"name": "pepepanpoggers",
+			"path": ".."
+		},
+		{
+			"name": "timer",
+			"path": "../../timer"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"gptimer_types.h": "c",
+			"gptimer.h": "c",
+			"timer_types.h": "c",
+			"freertos.h": "c",
+			"task.h": "c"
+		}
+	}
+}

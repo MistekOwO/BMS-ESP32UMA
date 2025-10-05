@@ -1,0 +1,15 @@
+dependencies:
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.4.1
+  tinyusb:
+    component_hash: null
+    source:
+      path: C:\Users\matiz\Dokumenty\PlatformIO\Projects\pepepanpoggers\components\tinyusb
+      type: local
+    version: 0.18.0~4
+manifest_hash: ca0d2cbb3c45c294b875c48ccc2c4ca9ad75efdfb6c4928d187a9c2f98fc1ce4
+target: esp32s2
+version: 1.0.0
