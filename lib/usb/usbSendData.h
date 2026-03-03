@@ -3,6 +3,7 @@
 #include "driver/gpio.h"
 #include "tinyusb.h"
 #include "class/hid/hid_device.h"
+#include "config.h"
 
 typedef struct __attribute__((packed)) {
     int8_t x;
@@ -13,46 +14,42 @@ uint16_t GpioPinToKeyCode(uint8_t pin)
 {
 switch(pin)
 {
-    //WhiteKeys
-    case 35:
+    case W1Button:
     return 0;
-    //return HID_KEY_X;
     break;
-    case 34:
+    case W2Button:
     return 1;
-    //return HID_KEY_C;
     break;
-    case 13:
+    case W3Button:
     return 2;
-    //return HID_KEY_V;
     break;
-    case 42:
+    case W4Button:
     return 3;
-    //return HID_KEY_B;
     break;
 
     //BlackKeys
-    case 5:
+    case B1Button:
     return 4;
-    //return HID_KEY_D;
     break;
-    case 16:
+    case B2Button:
     return 5;
-    //return HID_KEY_F;
     break;
-    case 17:
+    case B3Button:
     return 6;
-    //return HID_KEY_G;
     break;
 
     //FunctionKeys
-    case 3:
+    case F1Button:
     return 7;
-    //return HID_KEY_J;
     break;
-    case 36:
+    case F2Button:
     return 8;
-    //return HID_KEY_K;
+    break;
+    case F3Button:
+    return 9;
+    break;
+    case F4Button:
+    return 10; 
     break;
     default:
     return 656565;
@@ -71,7 +68,7 @@ void sendControllerInputs(uint8_t buttons[],int encoderValue)
     report.buttons = 0;
 if(tud_hid_ready())
 {
-    for(int i=0;i<9;i++)
+    for(int i=0;i<11;i++)
     {
         report.buttons |= (1<< GpioPinToKeyCode(buttons[i]));
     }
